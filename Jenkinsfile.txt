@@ -32,17 +32,17 @@ pipeline {
         }
 		//Code ends for stage Compile
         //Code starts for stage Code Analysis
-		// stage('Code Analysis') {
-        //     steps {
-		// 	 script {
-        //   scannerHome = tool 'sonar-scanner'
-        // }
-		// 		withSonarQubeEnv('My SonarQube Server')
-		// 		{
-		// 		sh "${scannerHome}/bin/sonar-scanner"
-		// 		}
-		// 	}
-		// }
+		stage('Code Analysis') {
+            steps {
+			 script {
+          scannerHome = tool 'sonar-scanner'
+        }
+				withSonarQubeEnv('My SonarQube Server')
+				{
+				sh "${scannerHome}/bin/sonar-scanner"
+				}
+			}
+		}
 		//Code ends for stage Code Analysis
 
 
