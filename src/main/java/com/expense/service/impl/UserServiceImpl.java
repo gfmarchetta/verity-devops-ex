@@ -65,13 +65,13 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User saveUser(User user) {
 		
-		// Buggy Code(UserServiceTest.saveUserTest())
-			user.setUsername("Uth");
-			return user;
+		// // Buggy Code(UserServiceTest.saveUserTest())
+		// 	user.setUsername("Uth");
+		// 	return user;
 
-		// Correct Code
-		//	user.setPassword(passwordEncoder.encode(user.getPassword()));
-		//	return userRepository.save(user);
+		Correct Code
+			user.setPassword(passwordEncoder.encode(user.getPassword()));
+			return userRepository.save(user);
 
 	}
 
