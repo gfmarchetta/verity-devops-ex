@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
 		// 	user.setUsername("Uth");
 		// 	return user;
 
-		Correct Code
+		//Correct Code
 			user.setPassword(passwordEncoder.encode(user.getPassword()));
 			return userRepository.save(user);
 
