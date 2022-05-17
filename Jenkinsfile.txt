@@ -116,6 +116,16 @@ pipeline {
             }
         }
 		//Code ends for stage System Test
+
+        //Code starts for stage BDD Test
+		stage('BDD Test') {
+            steps {
+				//Change git url below as per your forked github repository URL
+				git url: 'https://github.com/umangsaltuniv/EMSystemTests_BDD.git'
+            	sh 'mvn -Dtest=TestRunner test'
+            }
+        }
+		//Code ends for stage BDD Test	
     }
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
 }
